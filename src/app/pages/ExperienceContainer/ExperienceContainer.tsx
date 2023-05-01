@@ -27,7 +27,7 @@ const ExperienceContainer = () => {
     <>
       <div style={{ marginBottom: '100px' }}>
         <motion.div variants={fadeInFromTop()}>
-          <h2 className={` text-center`}>Work experience & Education</h2>
+          <h2 className={` text-center`}>Education & Work experience </h2>
           <p className={` text-center`}>
             My previous jobs and my qualifications.
           </p>
