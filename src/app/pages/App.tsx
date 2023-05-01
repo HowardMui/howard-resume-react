@@ -1,7 +1,7 @@
 import { ProgressBar } from 'app/components';
-import { TimeLine } from 'app/components/Experience';
 import { Button, Container } from 'react-bootstrap';
 import { ExperienceContainer } from './ExperienceContainer';
+import SkillContainer from './SkillContainer/SkillContainer';
 
 function App() {
   return (
@@ -11,7 +11,14 @@ function App() {
         testbtn
       </Button>
       <ProgressBar value={95}></ProgressBar>
+      <SkillContainer />
+      <div className="beforeExp">beforeExp</div>
+      <div className="beforeExp">beforeExp</div>
+      <div className="beforeExp">beforeExp</div>
+      <div className="beforeExp">beforeExp</div>
+      <div className="beforeExp">beforeExp</div>
       <ExperienceContainer />
+      <div className="beforeExp">beforeExp</div>
       <div>123</div>
       <div>123</div>
       <div>123</div>
