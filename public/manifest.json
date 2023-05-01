@@ -1,0 +1,9 @@
+{
+  "short_name": "HowardMui Resume",
+  "name": "HowardMui Resume App",
+  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

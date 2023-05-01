@@ -1,0 +1,38 @@
+$font-weights: (
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  '800': 800,
+  '900': 900,
+);
+
+$text-colors: (
+  'primary': $text-primary,
+  'secondary': $text-secondary,
+  'disabled': $text-disabled,
+  'orange': $app-secondary,
+  'darkorange': $app-secondary-dark,
+  'darkpurple': $app-primary-dark,
+  'purple': $app-primary,
+  'white': #ffffff,
+  'card': #737373,
+  'warning': $text-warning,
+  'link': $text-link,
+);
+
+// e.g. .font-12px-medium;
+@for $font-size from 10px through 48px {
+  @each $font-weight, $font-weight-size in $font-weights {
+    .font-#{$font-size}-#{$font-weight} {
+      @include typography($font-size, $font-weight);
+    }
+  }
+}
+
+// e.g. .text-color-primary;
+@each $text-color-index, $text-color in $text-colors {
+  .text-color-#{$text-color-index} {
+    color: $text-color;
+  }
+}
