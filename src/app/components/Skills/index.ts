@@ -1,1 +1,1 @@
-export * from './ProgressBar2';
+export * from './ProgressBar';

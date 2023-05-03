@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { fadeInFromTop } from 'utils/motion';
 import { SectionWrapper } from 'HOC';
 
-import { ProgressBar2 } from 'app/components/Skills';
+import { MY_SKILL_SET } from 'constant';
+import { ProgressBar } from 'app/components';
+import { Col, Row } from 'react-bootstrap';
 
 const SkillContainer = () => {
   return (
@@ -13,7 +15,13 @@ const SkillContainer = () => {
           <h2 className={` text-center`}>My skill set</h2>
         </motion.div>
       </div>
-      <ProgressBar2 />
+      <Row>
+        {MY_SKILL_SET.map(skill => (
+          <Col md={6}>
+            <ProgressBar skill={skill} />
+          </Col>
+        ))}
+      </Row>
     </>
   );
 };

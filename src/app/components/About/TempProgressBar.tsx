@@ -10,7 +10,7 @@ interface ProgressInput {
   textContent: string | null;
 }
 
-export const ProgressBar = ({ value }: Props) => {
+export const TempProgressBar = ({ value }: Props) => {
   const progressTextRef = useRef<ProgressInput | null>(null);
   useEffect(() => {
     const progressText = progressTextRef.current?.textContent;

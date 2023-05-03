@@ -10,7 +10,7 @@ function App() {
       <Button variant="danger" size="lg">
         testbtn
       </Button>
-      <ProgressBar value={95}></ProgressBar>
+      {/* <ProgressBar value={95}></ProgressBar> */}
       <SkillContainer />
       <div className="beforeExp">beforeExp</div>
       <div className="beforeExp">beforeExp</div>
