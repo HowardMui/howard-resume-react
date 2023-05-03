@@ -8,7 +8,7 @@ export const ProgressBar2 = () => {
 
   //   console.log(isInView);
   //   console.log(animate);
-  console.log('test');
+  console.log('test dev');
 
   useEffect(() => {
     // console.log(scope.current);
