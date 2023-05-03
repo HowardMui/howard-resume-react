@@ -12,12 +12,12 @@ const SkillContainer = () => {
     <>
       <div style={{ marginBottom: '100px' }}>
         <motion.div variants={fadeInFromTop()}>
-          <h2 className={` text-center`}>My skill set</h2>
+          <h2 className={`text-center`}>My skill set</h2>
         </motion.div>
       </div>
       <Row>
-        {MY_SKILL_SET.map(skill => (
-          <Col md={6}>
+        {MY_SKILL_SET.map((skill, index) => (
+          <Col md={6} key={index}>
             <ProgressBar skill={skill} />
           </Col>
         ))}
