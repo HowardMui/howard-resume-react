@@ -1,7 +1,7 @@
 import { SectionWrapper } from 'HOC';
 import ProjectCard from 'app/components/Portfolio/ProjectCard';
-import { PORTFOLIO_DATA } from 'constant/Portfolio';
-import React, { useEffect, useState } from 'react';
+import { PORTFOLIO_DATA } from 'constant';
+import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import 'assets/scss/Containers/PortfolioContainer/PortfolioContainer.scss';
 import { OptionItems, PortfolioData, WorkCategories } from 'models';
