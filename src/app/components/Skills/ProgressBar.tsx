@@ -11,6 +11,8 @@ export const ProgressBar = ({ skill }: Props) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
 
+  // console.log('progress', isInView);
+
   useEffect(() => {
     if (isInView) {
       animate(scope.current, { width: `${skill.percentage}%` });
