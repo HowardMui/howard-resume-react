@@ -1,0 +1,28 @@
+@import 'theme';
+
+.portfolio-container {
+  height: 1000px;
+  .tabs-div {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    transition: 0.3s ease-in-out;
+
+    .tab {
+      //   padding: 5px 15px;
+      margin: 0 30px;
+      cursor: pointer;
+      transition: 0.6s ease-in-out;
+      &:hover {
+        color: $app-yellow;
+      }
+    }
+
+    .active-tab {
+      color: $app-yellow;
+      //   border: 2px solid;
+
+      //   transition: 0.3s ease-in-out;
+    }
+  }
+}
