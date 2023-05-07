@@ -1,0 +1,54 @@
+.about-container {
+  min-height: 900px;
+  //   padding: 0 64px;
+
+  .flip-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .flipcard-wrapper {
+      cursor: pointer;
+      width: 200px;
+      min-height: 300px;
+      position: relative;
+      perspective: 200px;
+      background: '#FFFFFF';
+      margin: 0px 0 30px 0;
+
+      .flipcard {
+        //   cursor: pointer;
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        padding: 1rem;
+        backface-visibility: hidden;
+
+        .front-inner {
+          .image-div {
+            img {
+              border-radius: 40px;
+            }
+          }
+
+          .title-div {
+          }
+        }
+      }
+
+      .front-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .back-card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+}
