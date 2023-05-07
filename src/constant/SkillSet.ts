@@ -1,4 +1,4 @@
-import { SkillData } from 'models/SkillSet';
+import { SkillData } from 'models';
 
 export const MY_SKILL_SET: SkillData[] = [
   {

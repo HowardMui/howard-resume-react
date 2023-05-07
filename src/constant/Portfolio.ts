@@ -1,4 +1,4 @@
-import { PortfolioData } from 'models/Portfolio';
+import { PortfolioData } from 'models';
 
 export const PORTFOLIO_DATA: PortfolioData[] = [
   {

@@ -1,5 +1,5 @@
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import { PortfolioData } from 'models/Portfolio';
+import { PortfolioData } from 'models';
 import React from 'react';
 import { Badge } from 'react-bootstrap';
 import { fadeIn } from 'utils/motion';

@@ -1,7 +1,7 @@
 import { useInView, useAnimate } from 'framer-motion';
 import 'assets/scss/Components/Skills/ProgressBar.scss';
 import { useEffect } from 'react';
-import { SkillData } from 'models/SkillSet';
+import { SkillData } from 'models';
 
 interface Props {
   skill: SkillData;
