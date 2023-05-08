@@ -5,7 +5,7 @@ import { Col, Row } from 'react-bootstrap';
 
 const ContactContainer = () => {
   return (
-    <div className="">
+    <div className="" style={{ minHeight: '900px' }}>
       <h2 className={`text-center`}>Contact</h2>
       <Row>
         <Col md={6}>

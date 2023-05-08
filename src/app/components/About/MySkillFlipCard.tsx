@@ -59,10 +59,8 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
           className="cus-card flipcard back-card"
         >
           {cardData.languages.map((lang, index) => (
-            <ul>
-              <li className="" key={index}>
-                {lang}
-              </li>
+            <ul key={index}>
+              <li>{lang}</li>
             </ul>
           ))}
         </motion.div>
