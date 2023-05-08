@@ -3,7 +3,8 @@ import { AboutSkillSetData } from 'models';
 import ReactIcon from 'assets/icons/react.svg';
 import CloudIcon from 'assets/icons/cloud.svg';
 import ServerIcon from 'assets/icons/server.svg';
-import CubeIcon from 'assets/icons/cubes.svg';
+// import CubeIcon from 'assets/icons/cubes.svg';
+import CubeIcon from 'assets/icons/cube-bg.svg';
 
 export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
   {
