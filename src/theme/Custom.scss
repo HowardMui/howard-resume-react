@@ -45,6 +45,8 @@ button.clean-btn {
 
 .cus-card {
   // padding: 30px 16px;
+  display: flex;
+  flex: 1;
   box-shadow: $card-box-shadow;
   border: none;
   border-width: 0;

@@ -4,36 +4,39 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
   {
     category: 'my-work',
     image: '',
-    video: require('assets/video/React full company website.mp4'),
+    video: require('assets/video/React-company-website.mp4'),
     url: 'https://howardmui-company.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/HowardMui-Company-ReactProject',
     title: 'My React Company Website',
-    content: '',
+    content:
+      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
     tags: ['React', 'Nodejs', 'MongoDb'],
   },
   {
     category: 'my-work',
     image: '',
-    video: '',
+    video: require('assets/video/HowardMui-fetch-project.mp4'),
     url: 'https://howardmui-fetchpexels-project.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/Howard-fetchAPI-pexels',
     title: 'My Fetch Images Website',
-    content: '',
+    content:
+      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
     tags: ['React', 'Nodejs'],
   },
   {
     category: 'appicidea',
-    image: '',
+    image: require('assets/images/Portfolio/Weave/event-calendar.png'),
     video: null,
     url: null,
     gitHubLink: null,
     title: 'SV Web Application',
-    content: '',
+    content:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: ['React', 'Nodejs'],
   },
   {
     category: 'appicidea',
-    image: '',
+    image: require('assets/images/Portfolio/Weave/event-calendar.png'),
     video: null,
     url: null,
     gitHubLink: null,
@@ -43,7 +46,7 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
   },
   {
     category: 'appicidea',
-    image: '',
+    image: require('assets/images/Portfolio/Weave/event-calendar.png'),
     video: null,
     url: null,
     gitHubLink: null,
@@ -53,7 +56,7 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
   },
   {
     category: 'appicidea',
-    image: '',
+    image: require('assets/images/Portfolio/Weave/event-calendar.png'),
     video: null,
     url: null,
     gitHubLink: null,
@@ -63,7 +66,7 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
   },
   {
     category: 'appicidea',
-    image: '',
+    image: require('assets/images/Portfolio/Weave/event-calendar.png'),
     video: null,
     url: null,
     gitHubLink: null,

@@ -95,7 +95,13 @@ const PortfolioContainer = () => {
         <Row>
           <AnimatePresence>
             {data.map((myWork, index) => (
-              <Col md={4} key={`${myWork.title}`}>
+              <Col
+                className="d-flex"
+                xxl={4}
+                xl={6}
+                lg={6}
+                key={`${myWork.title}`}
+              >
                 {/* <motion.div
                 // key={`${myWork.title}`}
                 variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
