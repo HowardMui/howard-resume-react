@@ -1,33 +1,19 @@
 import { TimeLineData } from 'models';
 
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { MdSchool, MdWork } from 'react-icons/md';
+// import { MdSchool, MdWork } from 'react-icons/md';
 
 interface Props {
   data: TimeLineData;
 }
 
 export const TimeLine = ({ data }: Props) => {
-  //   console.log(data);
-
   return (
     <VerticalTimelineElement
       contentStyle={{
-        // border: '1px solid red',
-        // display: 'flex',
-        // flex: 1,
         boxShadow: '0px 0px 30px rgba(127, 137, 161, 0.25)',
         borderRadius: '20px',
-        // background: '#ffc107',
       }}
-      contentArrowStyle={
-        {
-          // borderRight: '10px solid  rgba(230,230,230)',
-          // borderRight: '20px',
-          // border: '10px solid red',
-          // boxShadow: '0px 0px 30px rgba(127, 137, 161, 0.25)',
-        }
-      }
       date={data.dateRange}
       style={{ color: '#000', border: '#FFFFFF' }}
       iconStyle={{
@@ -35,8 +21,8 @@ export const TimeLine = ({ data }: Props) => {
         boxShadow: '#ffc107 0px 1px 4px, #ffc107 0px 0px 0px 3px',
       }}
       icon={
-        <div className="w-100 h-100">
-          {data.school ? <MdSchool /> : <MdWork />}
+        <div className="w-100 h-100 d-flex justify-content-center align-items-center">
+          {data.icon}
         </div>
       }
     >
