@@ -3,18 +3,22 @@ import { PortfolioData } from 'models';
 export const PORTFOLIO_DATA: PortfolioData[] = [
   {
     category: 'my-work',
-    image: '',
+    image: null,
+    // image: require('assets/images/Portfolio/MyWeb/CompanyWeb/home-page.png'),
+    // video: null,
     video: require('assets/video/React-company-website.mp4'),
     url: 'https://howardmui-company.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/HowardMui-Company-ReactProject',
-    title: 'My React Company Website',
+    title: 'My Company Website',
     content:
       'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
     tags: ['React', 'Nodejs', 'MongoDb'],
   },
   {
     category: 'my-work',
-    image: '',
+    image: null,
+    // image: require('assets/images/Portfolio/MyWeb/FetchWeb/fetch-page.png'),
+    // video: null,
     video: require('assets/video/HowardMui-fetch-project.mp4'),
     url: 'https://howardmui-fetchpexels-project.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/Howard-fetchAPI-pexels',
@@ -41,7 +45,8 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     url: null,
     gitHubLink: null,
     title: 'SV CMS',
-    content: '',
+    content:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: ['Typescript', 'Reactjs', 'Nodejs'],
   },
   {
@@ -51,7 +56,8 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     url: null,
     gitHubLink: null,
     title: 'Weave-living CMS',
-    content: '',
+    content:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: ['Typescript', 'React', 'Nodejs'],
   },
   {
@@ -61,7 +67,8 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     url: null,
     gitHubLink: null,
     title: 'Fader CMS',
-    content: '',
+    content:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: ['Typescript', 'React', 'Nodejs'],
   },
   {
@@ -71,7 +78,8 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     url: null,
     gitHubLink: null,
     title: 'Man Space Mobile App',
-    content: '',
+    content:
+      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: ['Typescript', 'React-Native', 'Nodejs'],
   },
 ];
