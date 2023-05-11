@@ -1,27 +1,24 @@
-import { Container } from 'react-bootstrap';
 import { ExperienceContainer } from './ExperienceContainer';
 import SkillContainer from './SkillContainer/SkillContainer';
 import { ContactContainer } from './ContactContainer';
 import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
 import AboutContainer from './AboutContainer/AboutContainer';
-import { Footer } from 'app/components/Common';
+import { Footer, NavBar } from 'app/components/Common';
+import HomeContainer from './HomeContainer/HomeContainer';
 
 function App() {
   return (
     <>
-      <Container>
-        <div>
-          <div style={{ height: '100vh' }}>Hello world</div>
+      <NavBar />
+      <HomeContainer />
+      {/* <Container> */}
+      <AboutContainer />
+      {/* <SkillContainer /> */}
 
-          {/* <ProgressBar value={95}></ProgressBar> */}
-          <AboutContainer />
-          {/* <SkillContainer /> */}
-
-          <ExperienceContainer />
-          <PortfolioContainer />
-          <ContactContainer />
-        </div>
-      </Container>
+      <ExperienceContainer />
+      <PortfolioContainer />
+      <ContactContainer />
+      {/* </Container> */}
       <Footer />
     </>
   );
