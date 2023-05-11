@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 import { staggerContainer } from 'utils/motion';
 
-// import { styles } from "../styles";
-
 const StarWrapper = (Component, idName) =>
   function HOC() {
     return (
@@ -11,6 +9,7 @@ const StarWrapper = (Component, idName) =>
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-200px' }}
+        className="section-wrapper-container"
       >
         <span
           className="hash-span"

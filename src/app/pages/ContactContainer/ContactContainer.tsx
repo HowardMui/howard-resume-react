@@ -1,12 +1,13 @@
+import { SectionWrapper } from 'HOC';
 import ContactFormCard from 'app/components/Contact/ContactFormCard';
 import LeftSideContainer from 'app/components/Contact/LeftSideContainer';
-import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import 'assets/scss/Containers/ContactContainer/ContactContainer.scss';
 
 const ContactContainer = () => {
   return (
-    <div className="" style={{ minHeight: '900px' }}>
-      <h2 className={`text-center`}>Contact</h2>
+    <div className="contact-container" style={{ minHeight: '700px' }}>
+      <h2 className={`title-div title-margin text-center`}>Contact</h2>
       <Row>
         <Col md={6}>
           <LeftSideContainer />
@@ -19,4 +20,4 @@ const ContactContainer = () => {
   );
 };
 
-export default ContactContainer;
+export default SectionWrapper(ContactContainer, '');

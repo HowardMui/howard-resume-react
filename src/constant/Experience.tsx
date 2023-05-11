@@ -14,7 +14,7 @@ export const MT_JOURNEY: TimeLineData[] = [
     title: 'Front-end developer',
     description: [
       'Developed and implemented CMS, web and moblie applications with React, React Native, Typescript',
-      'Mainly responsible for frontend development using React and React Native',
+      // 'Mainly responsible for frontend development using React and React Native',
 
       'Work closely with colleagues to develop business logic, system and design',
 
