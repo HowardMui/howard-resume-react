@@ -67,39 +67,43 @@ button.clean-btn {
 .page-container {
   padding: 0px;
   padding-bottom: 24px;
+  @media (max-width: 768px) {
+    // mobile-padding
+    padding: 0 40px;
+  }
   @media (max-width: 576px) {
     // mobile-padding
     padding: 0 20px;
   }
-}
-
-.page-container-with-header {
-  @media screen and (max-width: 576px) {
-    // padding-top: $mobile-header-padding-top;
-    // margin-top: $mobile-page-margin-top;
-    padding-left: 8px;
-    padding-right: 8px;
+  @media screen and (max-width: 400px) {
+    padding: 0;
+    margin: 0;
   }
 }
 
-.drive-page-container {
-  padding-left: 28px;
-  padding-right: 28px;
+.section-wrapper-container {
+  padding: 64px;
+  margin: 0 60px;
+  @media (max-width: 768px) {
+    padding: 32px;
+    margin: 0 30px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 24px;
+    margin: 0 20px;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.title-margin {
+  margin-bottom: 40px;
 }
 
 .font-spacing {
   letter-spacing: 0.03em;
-}
-
-@mixin round-title-div {
-  width: 204px;
-  height: 65px;
-  background: #ffba5e;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .drag-none {
@@ -127,42 +131,6 @@ button.clean-btn {
   filter: brightness(0.5) invert(1);
   cursor: not-allowed !important;
 }
-
-//For error page
-.error-page-withUI {
-  height: 824px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (max-width: 576px) {
-    height: calc(100vh - 100px);
-  }
-}
-
-.return-to-home-link {
-  all: unset;
-  cursor: pointer;
-  text-align: center;
-  background: linear-gradient(to right, #ede3f7 0%, #fdf9ff 50%, #f1eaf9 100%);
-  // color: $app-primary;
-  height: 44px;
-  font-weight: 600;
-  line-height: 24.52px;
-  font-size: 18px;
-  width: 372px;
-  border-radius: 10px;
-  // @include cardShadow();
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (max-width: 576px) {
-    width: 300px;
-  }
-}
-//For error page
 
 // .ReactModal__Overlay {
 //   z-index: 1001 !important;
