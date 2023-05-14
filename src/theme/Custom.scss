@@ -1,11 +1,11 @@
 @import './Variables.scss';
 // @import './Shadow.scss';
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Ubuntu&display=swap');
 
 html,
 body {
-  font-family: 'Noto Sans', sans-serif;
-  color: $text-primary !important;
-  // background-color: $app-bg;
+  // color: $text-primary !important;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -13,6 +13,9 @@ body {
   max-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  // background: #f0f1f6;
+  // font-family: 'Pacifico', cursive;
+  // font-family: 'Lobster', cursive;
 }
 
 a {
@@ -52,6 +55,7 @@ button.clean-btn {
   border-width: 0;
   border-radius: 20px;
   margin: 10px;
+  background: #ffffff;
 }
 
 .noselect {
@@ -82,15 +86,16 @@ button.clean-btn {
 }
 
 .section-wrapper-container {
-  padding: 64px;
-  margin: 0 60px;
+  padding: 64px 120px;
+  // background: #f0f1f6;
+  // margin: 0 60px;
   @media (max-width: 768px) {
-    padding: 32px;
-    margin: 0 30px;
+    padding: 62px;
+    // margin: 0 30px;
   }
   @media screen and (max-width: 576px) {
-    padding: 24px;
-    margin: 0 20px;
+    padding: 44px;
+    // margin: 0 20px;
   }
   @media screen and (max-width: 400px) {
     padding: 0;
