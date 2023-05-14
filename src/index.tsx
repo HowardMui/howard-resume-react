@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-vertical-timeline-component/style.min.css';
 import ReactDOM from 'react-dom/client';
 import Modal from 'react-modal';
+import 'theme/index.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
