@@ -21,8 +21,6 @@ export const useOnScreen = ({ ref, threshold }: Props) => {
       },
     );
 
-    console.log(ref);
-
     if (ref.current) {
       console.log(ref.current);
       observer.observe(ref.current);
@@ -34,7 +32,7 @@ export const useOnScreen = ({ ref, threshold }: Props) => {
         observer.unobserve(ref.current);
       }
     };
-  }, [ref]);
+  }, [ref, threshold]);
 
   return isIntersecting;
 };

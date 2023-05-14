@@ -1,8 +1,34 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimate, useInView } from 'framer-motion';
+import { useOnScreen } from 'hooks/useOnScreen';
+import { NavBarType } from 'models';
+import { useEffect, useRef } from 'react';
 import { staggerContainer } from 'utils/motion';
 
+interface Props {
+  // Component: ,
+  setActive: (active: NavBarType | null) => void;
+}
+
 const StarWrapper = (Component, idName) =>
-  function HOC() {
+  function HOC({ setActive }: Props) {
+    const ref = useRef(null);
+    const isIntersecting = useOnScreen({ ref: ref });
+
+    useEffect(() => {
+      if (isIntersecting) {
+        setActive(idName);
+      }
+    }, [isIntersecting, setActive]);
+
+    // const [scope, animate] = useAnimate();
+    // const isInView = useInView(scope);
+
+    // useEffect(() => {
+    //   if (isInView) {
+    //     setActive(idName);
+    //   }
+    // }, [animate, isInView, scope, setActive]);
+
     return (
       <motion.section
         // variants={staggerContainer()}
@@ -11,6 +37,8 @@ const StarWrapper = (Component, idName) =>
         viewport={{ once: true, margin: '-200px' }}
         className="section-wrapper-container"
         id={idName}
+        // ref={scope}
+        ref={ref}
       >
         <span
           className="hash-span"
@@ -19,7 +47,7 @@ const StarWrapper = (Component, idName) =>
           &nbsp;
         </span>
 
-        <Component />
+        <Component setActive={setActive} />
       </motion.section>
     );
   };

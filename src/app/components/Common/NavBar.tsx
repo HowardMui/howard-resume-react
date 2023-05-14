@@ -6,6 +6,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { useMemo, useRef, useState } from 'react';
 import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { NavBarType } from 'models';
 
 const NavBarData = [
   {
@@ -30,13 +31,18 @@ interface MyHTMLElement extends HTMLElement {
   classList: DOMTokenList;
 }
 
-export const NavBar = () => {
+interface Props {
+  active: NavBarType | null;
+  setActive: (value: NavBarType | null) => void;
+}
+
+export const NavBar = ({ active, setActive }: Props) => {
   const navRef = useRef<MyHTMLElement>(null);
   const [baseColor, setBaseColor] = useState<string>('#000');
   // const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [pageScrollY, setPageScrollY] = useState<number>(0);
   const { scrollY } = useScroll();
-  const [active, setActive] = useState<string | null>(null);
+  // const [active, setActive] = useState<string | null>(null);
 
   useMotionValueEvent(scrollY, 'change', latest => {
     setPageScrollY(latest);
@@ -73,9 +79,9 @@ export const NavBar = () => {
   //   [active, pageScrollY],
   // );
 
-  const navTitleOnClick = (title: string) => {
+  const navTitleOnClick = (id: string) => {
     navRef.current?.classList.remove('responsive_nav');
-    setActive(title);
+    setActive(id as NavBarType);
   };
 
   return (
@@ -98,11 +104,11 @@ export const NavBar = () => {
           <a
             key={index}
             href={`#${id}`}
-            onClick={() => navTitleOnClick(title)}
+            onClick={() => navTitleOnClick(id)}
             className="nav-title"
             style={{
               color:
-                active === title
+                active === id
                   ? '#ffc107'
                   : pageScrollY > 0
                   ? '#FFFFFF'
