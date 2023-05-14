@@ -1,27 +1,24 @@
 import { ExperienceContainer } from './ExperienceContainer';
-import SkillContainer from './SkillContainer/SkillContainer';
 import { ContactContainer } from './ContactContainer';
 import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
 import AboutContainer from './AboutContainer/AboutContainer';
 import { Footer, NavBar } from 'app/components/Common';
 import HomeContainer from './HomeContainer/HomeContainer';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
       <HomeContainer />
-      {/* <Container> */}
       <AboutContainer />
-      {/* <SkillContainer /> */}
 
       <ExperienceContainer />
       <PortfolioContainer />
       <ContactContainer />
-      {/* </Container> */}
       <Footer />
-    </>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

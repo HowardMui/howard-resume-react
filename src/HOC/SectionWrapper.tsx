@@ -10,10 +10,10 @@ const StarWrapper = (Component, idName) =>
         whileInView="show"
         viewport={{ once: true, margin: '-200px' }}
         className="section-wrapper-container"
+        id={idName}
       >
         <span
           className="hash-span"
-          id={idName}
           style={{ paddingBottom: '100px', marginBottom: '100px' }}
         >
           &nbsp;

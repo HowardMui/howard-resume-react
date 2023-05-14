@@ -44,4 +44,4 @@ const AboutContainer = (props: Props) => {
   );
 };
 
-export default SectionWrapper(AboutContainer, '');
+export default SectionWrapper(AboutContainer, 'about');

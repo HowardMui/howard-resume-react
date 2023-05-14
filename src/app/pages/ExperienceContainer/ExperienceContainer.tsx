@@ -63,4 +63,4 @@ const ExperienceContainer = () => {
   );
 };
 
-export default SectionWrapper(ExperienceContainer, '');
+export default SectionWrapper(ExperienceContainer, 'experience');

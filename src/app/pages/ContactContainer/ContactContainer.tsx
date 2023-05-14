@@ -6,7 +6,7 @@ import 'assets/scss/Containers/ContactContainer/ContactContainer.scss';
 
 const ContactContainer = () => {
   return (
-    <div className="contact-container" style={{ minHeight: '700px' }}>
+    <div className="contact-container" id="contact">
       <h2 className={`title-div title-margin text-center`}>Contact</h2>
       <Row>
         <Col md={6}>
@@ -20,4 +20,4 @@ const ContactContainer = () => {
   );
 };
 
-export default SectionWrapper(ContactContainer, '');
+export default ContactContainer;
