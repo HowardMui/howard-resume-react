@@ -82,6 +82,11 @@ export const NavBar = ({ active, setActive }: Props) => {
   const navTitleOnClick = (id: string) => {
     navRef.current?.classList.remove('responsive_nav');
     setActive(id as NavBarType);
+    // const executeScroll = () => myRef.current.scrollIntoView()
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -101,9 +106,9 @@ export const NavBar = ({ active, setActive }: Props) => {
       </Link>
       <nav className="navbar-wrapper" ref={navRef}>
         {NavBarData.map(({ title, id }, index) => (
-          <a
+          <div
             key={index}
-            href={`#${id}`}
+            // href={`#${id}`}
             onClick={() => navTitleOnClick(id)}
             className="nav-title"
             style={{
@@ -117,7 +122,7 @@ export const NavBar = ({ active, setActive }: Props) => {
             // style={colorCondition(title)}
           >
             {title}
-          </a>
+          </div>
         ))}
         <div className="nav-btn nav-close-btn fs-1" onClick={showNavbar}>
           <IoCloseSharp />
