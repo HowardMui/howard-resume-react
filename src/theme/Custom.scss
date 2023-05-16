@@ -1,11 +1,12 @@
 @import './Variables.scss';
 // @import './Shadow.scss';
-@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Ubuntu&display=swap');
 
 html,
 body {
   // color: $text-primary !important;
-  font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 body {
@@ -86,9 +87,9 @@ button.clean-btn {
 }
 
 .section-wrapper-container {
-  padding: 64px 120px;
+  padding: 30px 120px;
   // background: #f0f1f6;
-  // margin: 0 60px;
+  // margin: 60px 0;
   @media (max-width: 768px) {
     padding: 62px;
     // margin: 0 30px;
