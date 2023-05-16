@@ -11,8 +11,6 @@ export const useOnScreen = ({ ref, threshold }: Props) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log(entry);
-
         setIntersecting(entry.isIntersecting);
       },
       {
@@ -22,7 +20,6 @@ export const useOnScreen = ({ ref, threshold }: Props) => {
     );
 
     if (ref.current) {
-      console.log(ref.current);
       observer.observe(ref.current);
     }
 

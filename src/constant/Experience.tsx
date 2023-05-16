@@ -20,7 +20,7 @@ export const MT_JOURNEY: TimeLineData[] = [
 
       'Participate in scrum activities and practice Agile methodologies',
     ],
-    dateRange: 'Jun 2022 - Sep 2023',
+    dateRange: 'Jun 2022 - Current',
     school: null,
     icon: <img src={AppicideaIcon} alt={'resolve'} width={30} height={30} />,
   },
