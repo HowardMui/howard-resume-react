@@ -4,6 +4,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { InputField } from '../Form';
 import 'assets/scss/Components/Contact/ContactFormCard.scss';
+import SendingGif from 'assets/gif/sending_trans_30.gif';
 
 // form type
 export type FormItem = {
@@ -38,9 +39,7 @@ const ContactFormCard = () => {
   const onSubmit = () => {};
 
   return (
-    // <Card>
-    //   <Card.Body className="card">
-    <div className="card">
+    <div className="cus-card">
       <Formik
         initialValues={form}
         validationSchema={SCHEMA}
@@ -50,10 +49,10 @@ const ContactFormCard = () => {
         {({ values, errors, setFieldValue, setFieldError }) => (
           <Form>
             <Row>
-              <Col md={6}>
+              <Col md={12}>
                 <InputField name="name" placeholder="Name" />
               </Col>
-              <Col md={6}>
+              <Col md={12}>
                 <InputField name="email" placeholder="Email" />
               </Col>
               {/* <Col md={12}>
@@ -68,13 +67,12 @@ const ContactFormCard = () => {
               </Col>
             </Row>
             <div className="mt-3 text-center">
-              <Button
-                type="submit"
-                color="primary"
-                className="ms-1"
-                disabled={loading}
-              >
-                {loading ? <div>Loading</div> : 'Submit'}
+              <Button type="submit" className="ms-1" disabled={loading}>
+                {loading ? (
+                  <div>Loading</div>
+                ) : (
+                  <img src={SendingGif} alt="sending" width={60} height={40} />
+                )}
               </Button>
             </div>
           </Form>
