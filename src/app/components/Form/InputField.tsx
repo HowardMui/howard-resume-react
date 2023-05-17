@@ -3,6 +3,7 @@ import 'assets/scss/Components/Form/Form.scss';
 import clsx from 'clsx';
 import { FieldHookConfig, useField } from 'formik';
 import React from 'react';
+import { RxCrossCircled } from 'react-icons/rx';
 
 type InputType =
   | 'textarea'
@@ -36,7 +37,6 @@ interface OtherProps {
   placeholder?: string;
   rows?: number;
   disabled?: boolean;
-  prefix?: string;
   allowToViewPassword?: boolean;
   customPlaceHolder?: boolean;
   customPlaceHolderText?: string;
@@ -52,12 +52,11 @@ export const InputField = (props: OtherProps & FieldHookConfig<string>) => {
     placeholder,
     horizontal,
     disabled,
-    prefix,
-    allowToViewPassword,
     customPlaceHolder,
     customPlaceHolderText,
     requiredSymbol,
   } = props;
+
   return (
     <div
       className={clsx(
@@ -84,17 +83,10 @@ export const InputField = (props: OtherProps & FieldHookConfig<string>) => {
       </div>
       <div className="d-flex flex-row w-100">
         <div className="w-100 input-div-wrapper">
-          {prefix ? (
-            <div className="d-flex align-items-center text-nowrap me-2">
-              {prefix}
-            </div>
-          ) : null}
-
           {type === 'textarea' ? (
             <textarea
               {...field}
               placeholder={disabled ? '' : placeholder}
-              autoComplete="new-password"
               disabled={disabled}
               value={field.value || ''}
               className="w-100"
@@ -104,34 +96,17 @@ export const InputField = (props: OtherProps & FieldHookConfig<string>) => {
               {...field}
               placeholder={disabled ? '' : placeholder}
               type={passwordVisible ? 'text' : type}
-              autoComplete="new-password"
               disabled={disabled}
               value={field.value || ''}
               className="w-100"
             />
           )}
-          {allowToViewPassword ? (
-            <button
-              className="btn btn-light ms-1"
-              type="button"
-              onClick={() => setPasswordVisible(!passwordVisible)}
-            >
-              {passwordVisible ? (
-                <i className="mdi mdi-eye-off-outline" />
-              ) : (
-                <i className="mdi mdi-eye-outline" />
-              )}
-            </button>
-          ) : null}
           {field.value ? (
             <div className="cancel-input-btn-div">
-              <div className="">X</div>
-              {/* <img
-                src={CancelBtn}
-                alt=""
-                className=""
+              <RxCrossCircled
                 onClick={() => helpers.setValue('')}
-              /> */}
+                className="fs-5"
+              />
             </div>
           ) : null}
         </div>

@@ -25,7 +25,6 @@ export const useOnScreen = ({ ref, threshold }: Props) => {
 
     return () => {
       if (ref.current) {
-        console.log('in return', ref.current);
         observer.unobserve(ref.current);
       }
     };
