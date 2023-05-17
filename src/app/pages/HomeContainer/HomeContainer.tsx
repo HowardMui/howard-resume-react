@@ -1,17 +1,11 @@
 import 'assets/scss/Containers/HomeContainer/HomeContainer.scss';
-import {
-  useMotionValueEvent,
-  useScroll,
-  motion,
-  useAnimate,
-  useInView,
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ReactComponent as CpuIcon } from 'assets/icons/home-cpu-no-clock.svg';
 // import CodingGif from 'assets/gif/coding_cpu.gif';
 import DesktopGif from 'assets/gif/desktop-nobg.gif';
 import OldDesktopGif from 'assets/gif/old_desktop_9.gif';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useOnScreen } from 'hooks/useOnScreen';
 import { NavBarType } from 'models';
 
@@ -20,75 +14,15 @@ interface Props {
 }
 
 const HomeContainer = ({ setActive }: Props) => {
-  // const options = useMemo(() => {
-  //   return {
-  //     particles: {
-  //       link: {
-  //         enabled: true,
-  //       },
-  //       move: {
-  //         enabled: true,
-  //       },
-  //       size: {
-  //         value: { min: 1, max: 1 },
-  //       },
-  //     },
-  //   };
-  // }, []);
-
-  // const ref = useRef<HTMLDivElement>(null);
-  // const isVisible = useOnScreen(ref);
-
-  // useEffect(() => {
-  //   // console.log('home', isVisible);
-  //   // if (isVisible) {
-  //   //   setActive(null);
-  //   // }
-  // }, [isVisible, setActive]);
-
-  // const [scope, animate] = useAnimate();
-  // const isInView = useInView(scope);
-
-  // useEffect(() => {
-  //   // console.log(idName, isInView);
-  //   // console.log(isInView);
-  //   if (isInView) {
-  //     setActive(null);
-  //   }
-  // }, [animate, isInView, scope, setActive]);
-
   const myDivRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+
+  const isIntersecting = useOnScreen({ ref: myDivRef });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        rootMargin: '0px',
-        threshold: 0.5,
-      },
-    );
-
-    if (myDivRef.current) {
-      observer.observe(myDivRef.current);
-    }
-
-    return () => {
-      if (myDivRef.current) {
-        observer.unobserve(myDivRef.current);
-      }
-    };
-  }, [myDivRef]);
-
-  useMemo(() => {
-    if (isVisible) {
-      setActive(null);
-    } else {
+    if (isIntersecting) {
       setActive(null);
     }
-  }, [isVisible, setActive]);
+  }, [isIntersecting, setActive]);
 
   return (
     <div className="home-container" ref={myDivRef}>
@@ -108,7 +42,6 @@ const HomeContainer = ({ setActive }: Props) => {
             lg={6}
             className="right-div d-flex justify-content-end align-items-end "
           >
-            {/* <CodingGif width={450} height={450} /> */}
             {/* <img src={DesktopGif} alt="desktop" className="gif-div" /> */}
             <img src={OldDesktopGif} alt="desktop" className="gif-div" />
           </Col>

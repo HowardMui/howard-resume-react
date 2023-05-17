@@ -69,22 +69,22 @@ button.clean-btn {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-.page-container {
-  padding: 0px;
-  padding-bottom: 24px;
-  @media (max-width: 768px) {
-    // mobile-padding
-    padding: 0 40px;
-  }
-  @media (max-width: 576px) {
-    // mobile-padding
-    padding: 0 20px;
-  }
-  @media screen and (max-width: 400px) {
-    padding: 0;
-    margin: 0;
-  }
-}
+// .page-container {
+//   padding: 0px;
+//   padding-bottom: 24px;
+//   @media (max-width: 768px) {
+//     // mobile-padding
+//     padding: 0 40px;
+//   }
+//   @media (max-width: 576px) {
+//     // mobile-padding
+//     padding: 0 20px;
+//   }
+//   @media screen and (max-width: 400px) {
+//     padding: 0;
+//     margin: 0;
+//   }
+// }
 
 .section-wrapper-container {
   padding: 30px 120px;
@@ -99,8 +99,26 @@ button.clean-btn {
     // margin: 0 20px;
   }
   @media screen and (max-width: 400px) {
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
+  }
+}
+
+.bp-md {
+  @media screen and (max-width: 768px) {
+    padding: 62px;
+  }
+}
+.bp-sm {
+  @media screen and (max-width: 576px) {
+    padding: 44px;
+  }
+}
+
+.bp-400 {
+  @media screen and (max-width: 400px) {
+    padding: 0;
+    margin: 70px 0 0 0;
   }
 }
 

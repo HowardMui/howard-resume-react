@@ -16,13 +16,18 @@
       &:hover {
         color: $app-yellow;
       }
+
+      @media screen and (max-width: 500px) {
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: 380px) {
+        margin: 0 15px;
+      }
     }
 
     .active-tab {
       color: $app-yellow;
-      //   border: 2px solid;
-
-      //   transition: 0.3s ease-in-out;
     }
   }
 

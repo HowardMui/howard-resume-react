@@ -52,5 +52,9 @@
         flex-direction: column;
       }
     }
+
+    @media screen and (max-width: 490px) {
+      justify-content: center;
+    }
   }
 }

@@ -51,12 +51,14 @@ const ExperienceContainer = ({ setActive }: Props) => {
       ref={myDivRef}
     >
       <div className="experience-container">
-        <div style={{ marginBottom: '100px' }}>
+        <div style={{ marginBottom: '50px' }}>
           <motion.div variants={fadeInFromTop()}>
-            <h2 className={` text-center`}>Education & Work experience </h2>
-            <p className={` text-center`}>
+            <p className={`text-center`}>
               My previous jobs and my qualifications.
             </p>
+            <h2 className={`text-center fw-bold`}>
+              Education & Work experience{' '}
+            </h2>
           </motion.div>
         </div>
         <VerticalTimeline lineColor={'#ffc107'} layout="2-columns">

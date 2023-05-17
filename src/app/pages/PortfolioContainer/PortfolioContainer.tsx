@@ -125,6 +125,7 @@ const PortfolioContainer = ({ setActive }: Props) => {
     >
       <div className="portfolio-container">
         <motion.div variants={fadeInFromTop()}>
+          <p className={`text-center`}>My work so far.</p>
           <h2 className={`text-center`}>Portfolio</h2>
 
           <div className="tabs-div">
