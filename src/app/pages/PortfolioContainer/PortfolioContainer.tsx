@@ -43,43 +43,10 @@ interface Props {
 const PortfolioContainer = ({ setActive }: Props) => {
   const [data, setData] = useState<PortfolioData[]>(PORTFOLIO_DATA);
   const [tab, setTab] = useState<WorkCategories>('all');
-  //   const [scope, animate] = useAnimate();
-  //   const isInView = useInView(scope);
-
-  //   useEffect(() => {
-  //     if (isInView) {
-  //       console.log(123);
-  //       //   animate(scope.current, { width: `${skill.percentage}%` });
-  //     }
-  //   }, [animate, isInView, scope]);
 
   const myDivRef = useRef(null);
-  // const [isVisible, setIsVisible] = useState(false);
 
   const isIntersecting = useOnScreen({ ref: myDivRef, threshold: 0.2 });
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       // console.log(entry);
-  //       setIsVisible(entry.isIntersecting);
-  //     },
-  //     {
-  //       rootMargin: '0px',
-  //       threshold: 0.2,
-  //     },
-  //   );
-
-  //   if (myDivRef.current) {
-  //     observer.observe(myDivRef.current);
-  //   }
-
-  //   return () => {
-  //     if (myDivRef.current) {
-  //       observer.unobserve(myDivRef.current);
-  //     }
-  //   };
-  // }, [myDivRef]);
 
   useEffect(() => {
     if (isIntersecting) {
@@ -108,10 +75,9 @@ const PortfolioContainer = ({ setActive }: Props) => {
 
   return (
     <motion.section
-      // variants={staggerContainer()}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: '-200px' }}
+      viewport={{ once: true, margin: '-200px 0px 0px 0px' }}
       className="section-wrapper-container"
       id={'portfolio'}
       ref={myDivRef}
@@ -144,23 +110,16 @@ const PortfolioContainer = ({ setActive }: Props) => {
                   lg={6}
                   key={`${myWork.title}`}
                 >
-                  {/* <motion.div
-                // key={`${myWork.title}`}
-                variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
-              > */}
                   <motion.div
                     layout
                     className="cus-card"
                     key={`${myWork.title}`}
                     initial={'initial'}
-                    // initial={`${isInView && 'initial'}`}
-                    // animate={`${isInView && '"animate"'}`}
                     animate="animate"
                     exit="exit"
                     variants={cardVarient(index)}
                   >
                     <ProjectCard data={myWork} index={index} />
-                    {/* </motion.div> */}
                   </motion.div>
                 </Col>
               ))}
