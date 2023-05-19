@@ -1,24 +1,17 @@
-import { SectionWrapper } from 'HOC';
 import ProjectCard from 'app/components/Portfolio/ProjectCard';
 import { PORTFOLIO_DATA } from 'constant';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import 'assets/scss/Containers/PortfolioContainer/PortfolioContainer.scss';
 import { NavBarType, OptionItems, PortfolioData, WorkCategories } from 'models';
-import {
-  AnimatePresence,
-  Variants,
-  motion,
-  useAnimate,
-  useInView,
-} from 'framer-motion';
+import { AnimatePresence, Variants, motion } from 'framer-motion';
 import { fadeIn, fadeInFromTop } from 'utils/motion';
 import { useOnScreen } from 'hooks/useOnScreen';
 
 const TabsArray: OptionItems[] = [
   { label: 'All', value: 'all' },
-  { label: 'my work', value: 'my-work' },
-  { label: 'Appicidea', value: 'appicidea' },
+  { label: 'frontend', value: 'frontend' },
+  { label: 'backend', value: 'backend' },
 ];
 
 const cardVarient = (index): Variants => {
@@ -101,14 +94,17 @@ const PortfolioContainer = ({ setActive }: Props) => {
       case 'all':
         setData(PORTFOLIO_DATA);
         break;
+
       default:
         setData(
-          PORTFOLIO_DATA.filter(
-            item => item.category === (tab.value as WorkCategories),
+          PORTFOLIO_DATA.filter(item =>
+            item.category.includes(tab.value as WorkCategories),
           ),
         );
     }
   };
+
+  // console.log(data);
 
   return (
     <motion.section

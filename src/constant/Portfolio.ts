@@ -2,7 +2,7 @@ import { PortfolioData } from 'models';
 
 export const PORTFOLIO_DATA: PortfolioData[] = [
   {
-    category: 'my-work',
+    category: ['frontend', 'backend'],
     image: null,
     // image: require('assets/images/Portfolio/MyWeb/CompanyWeb/home-page.png'),
     // video: null,
@@ -11,11 +11,15 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     gitHubLink: 'https://github.com/HowardMui/HowardMui-Company-ReactProject',
     title: 'My Company Website',
     content:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
-    tags: ['React', 'Nodejs', 'MongoDb'],
+      'It is a demo static company website for the React and style showcase.  MongoDb is integrated into the contact form for the data storage. ',
+    tags: [
+      { tag: 'React', color: '#ADD8E6' },
+      { tag: 'Nodejs', color: '#D2B4BC' },
+      { tag: 'MongoDb', color: '#90EE90' },
+    ],
   },
   {
-    category: 'my-work',
+    category: ['frontend'],
     image: null,
     // image: require('assets/images/Portfolio/MyWeb/FetchWeb/fetch-page.png'),
     // video: null,
@@ -24,8 +28,17 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     gitHubLink: 'https://github.com/HowardMui/Howard-fetchAPI-pexels',
     title: 'My Fetch Images Website',
     content:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
-    tags: ['React', 'Nodejs'],
+      'Fetch the Pexel images via my Pexel token and integrate it to the website.  The user may search images via the search bar.  Press load more button for fetch more images. ',
+    tags: [
+      {
+        tag: 'React',
+        color: '#ADD8E6',
+      },
+      {
+        tag: 'Nodejs',
+        color: '#D2B4BC',
+      },
+    ],
   },
   // {
   //   category: 'appicidea',
