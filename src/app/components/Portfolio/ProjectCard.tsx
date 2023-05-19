@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { PortfolioData } from 'models';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BiLink } from 'react-icons/bi';
 import { FiZoomIn } from 'react-icons/fi';
 import { ImageExplore } from '../Common';
@@ -74,11 +74,11 @@ const ProjectCard = ({ data, index }: Props) => {
                 width={'100%'}
                 height={'100%'}
               />
-              <div className="link-wrapper">
+              {/* <div className="link-wrapper">
                 <div className=" link-div" onClick={() => setOpen(true)}>
                   <FiZoomIn />
                 </div>
-              </div>
+              </div> */}
             </>
           )}
           <div className="link-wrapper">
