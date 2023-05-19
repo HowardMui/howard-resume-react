@@ -38,11 +38,9 @@ interface Props {
 
 export const NavBar = ({ active, setActive }: Props) => {
   const navRef = useRef<MyHTMLElement>(null);
-  const [baseColor, setBaseColor] = useState<string>('#000');
-  // const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [pageScrollY, setPageScrollY] = useState<number>(0);
   const { scrollY } = useScroll();
-  // const [active, setActive] = useState<string | null>(null);
 
   useMotionValueEvent(scrollY, 'change', latest => {
     setPageScrollY(latest);
@@ -51,9 +49,9 @@ export const NavBar = ({ active, setActive }: Props) => {
   const showNavbar = () => {
     navRef.current?.classList.toggle('responsive_nav');
     if (navRef.current?.className.includes('responsive_nav')) {
-      setBaseColor('#ffffff');
+      setIsOpen(true);
     } else {
-      setBaseColor('#000');
+      setIsOpen(false);
     }
   };
 
@@ -61,23 +59,6 @@ export const NavBar = ({ active, setActive }: Props) => {
     setActive(null);
     window.scrollTo(0, 0);
   };
-
-  // const colorCondition = useMemo(
-  //   () => (title: string) => {
-  //     let color: string = '#000';
-  //     if (active === title) {
-  //       color = '#ffc107';
-  //     } else if (pageScrollY > 0) {
-  //       color = '#FFFFFF';
-  //     } else if (navRef.current?.className.includes('responsive_nav')) {
-  //       color = '#FFFFFF';
-  //     } else {
-  //       color = '#000';
-  //     }
-  //     return { color: color };
-  //   },
-  //   [active, pageScrollY],
-  // );
 
   const navTitleOnClick = (id: string) => {
     navRef.current?.classList.remove('responsive_nav');
@@ -110,6 +91,8 @@ export const NavBar = ({ active, setActive }: Props) => {
             className={`nav-title ${
               active === id
                 ? 'yellow-color'
+                : isOpen
+                ? 'white-color'
                 : pageScrollY > 0
                 ? 'white-color'
                 : 'black-color'

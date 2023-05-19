@@ -1,9 +1,3 @@
-// import GithubIcon from 'assets/icons/github.png';
-// import { IoLogoLinkedin } from 'react-icons/io';
-// import { TfiEmail } from 'react-icons/tfi';
-// import { MdEmail } from 'react-icons/md';
-// import { VscGithubInverted, VscGithub } from 'react-icons/vsc';
-
 import 'assets/scss/Components/Common/Footer.scss';
 
 type Props = {};
@@ -23,7 +17,7 @@ export const Footer = (props: Props) => {
         window.open('https://www.linkedin.com/in/howardmui-resume/', '_blank');
         break;
       case 'email':
-        window.open('mailto:howardmui.2020@gamil.com');
+        window.open('mailto:howardmui.2020@gmail.com');
         break;
       default:
         console.log(`Sorry, we are out of.`);
