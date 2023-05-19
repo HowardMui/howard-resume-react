@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { PortfolioData } from 'models';
 import React, { useState } from 'react';
-import { fadeIn } from 'utils/motion';
-import GithubIcon from 'assets/icons/github.png';
 import { BiLink } from 'react-icons/bi';
 import { FiZoomIn } from 'react-icons/fi';
 import { ImageExplore } from '../Common';
+
+import { VscGithubInverted } from 'react-icons/vsc';
 
 interface Props {
   data: PortfolioData;
@@ -17,30 +17,34 @@ const ProjectCard = ({ data, index }: Props) => {
     data;
   const [open, setOpen] = useState<boolean>(false);
 
-  const testTransform = () => {
-    return {
-      exit: {
-        opacity: 0,
-        scale: 0,
-        transition: {
-          type: 'spring',
-          duration: 0.5,
-        },
-      },
-      //   hide: {
-      //     opacity: 0,
-      //     scale: 0,
-      //   },
-      show: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-          type: 'spring',
-          duration: 0.5,
-        },
-      },
-    };
+  const iconOnClick = (icon: string) => {
+    window.open(icon, '_blank');
   };
+
+  // const testTransform = () => {
+  //   return {
+  //     exit: {
+  //       opacity: 0,
+  //       scale: 0,
+  //       transition: {
+  //         type: 'spring',
+  //         duration: 0.5,
+  //       },
+  //     },
+  //     //   hide: {
+  //     //     opacity: 0,
+  //     //     scale: 0,
+  //     //   },
+  //     show: {
+  //       opacity: 1,
+  //       scale: 1,
+  //       transition: {
+  //         type: 'spring',
+  //         duration: 0.5,
+  //       },
+  //     },
+  //   };
+  // };
 
   const onClose = () => {
     setOpen(false);
@@ -48,7 +52,7 @@ const ProjectCard = ({ data, index }: Props) => {
 
   return (
     <>
-      <motion.div className="p-4 card-container" key={`${category}-${title}`}>
+      <motion.div className="card-container" key={`${category}-${title}`}>
         <div className="media-div">
           {video ? (
             <>
@@ -80,40 +84,29 @@ const ProjectCard = ({ data, index }: Props) => {
           <div className="link-wrapper">
             {gitHubLink && (
               <div className="github-link link-div">
-                <a href={gitHubLink} target="_blank" rel="noreferrer">
-                  <img
-                    src={GithubIcon}
-                    alt="github"
-                    className=""
-                    width={25}
-                    height={25}
-                  />
-                </a>
+                <VscGithubInverted onClick={() => iconOnClick(gitHubLink)} />
               </div>
             )}
             {url && (
               <div className="website-link link-div">
-                <a
-                  href={url ? url : ''}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-white"
-                >
-                  <BiLink />
-                </a>
+                <BiLink onClick={() => iconOnClick(url)} />
               </div>
             )}
           </div>
         </div>
-        <div className="content-div mt-3">
+        <div className="content-div mt-1 p-4">
           <h3 className="">{title}</h3>
           <div className="content-section-div">
             <div className="mt-3">{content}</div>
             <div className="d-flex mt-4">
               {tags.length > 0
                 ? tags.map((tag, index) => (
-                    <div key={index} className="me-1 badge badge-div">
-                      <div className="text-dark">#{tag}</div>
+                    <div
+                      key={index}
+                      className="me-1 tag-wrapper"
+                      style={{ background: tag.color }}
+                    >
+                      <div className="text-dark tag">#{tag.tag}</div>
                     </div>
                   ))
                 : null}
