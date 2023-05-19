@@ -4,5 +4,5 @@ export interface TimeLineData {
   title: string;
   description: string[] | null;
   dateRange: string;
-  icon: string | null;
+  icon: React.ReactNode | null;
 }

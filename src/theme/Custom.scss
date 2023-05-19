@@ -1,0 +1,190 @@
+@import './Variables.scss';
+// @import './Shadow.scss';
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Ubuntu&display=swap');
+
+html,
+body {
+  // color: $text-primary !important;
+  // font-family: 'Ubuntu', sans-serif;
+  font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // background: #f0f1f6;
+  // font-family: 'Pacifico', cursive;
+  // font-family: 'Lobster', cursive;
+}
+
+a {
+  color: #0f18ef;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+button {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+button.clean-btn {
+  border: unset;
+  background-color: transparent;
+  padding: 0px;
+  box-shadow: unset;
+}
+
+@mixin cardShadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+}
+
+.card {
+  padding: 30px 16px;
+  box-shadow: $card-box-shadow;
+  border: none;
+  border-width: 0;
+}
+
+.cus-card {
+  // padding: 30px 16px;
+  display: flex;
+  flex: 1;
+  box-shadow: $card-box-shadow;
+  border: none;
+  border-width: 0;
+  border-radius: 20px;
+  margin: 10px;
+  background: #ffffff;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+// .page-container {
+//   padding: 0px;
+//   padding-bottom: 24px;
+//   @media (max-width: 768px) {
+//     // mobile-padding
+//     padding: 0 40px;
+//   }
+//   @media (max-width: 576px) {
+//     // mobile-padding
+//     padding: 0 20px;
+//   }
+//   @media screen and (max-width: 400px) {
+//     padding: 0;
+//     margin: 0;
+//   }
+// }
+
+.section-wrapper-container {
+  padding: 30px 120px;
+  // background: #f0f1f6;
+  // margin: 60px 0;
+  @media (max-width: 768px) {
+    padding: 62px;
+    // margin: 0 30px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 44px;
+    // margin: 0 20px;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0 20px;
+    margin: 0;
+  }
+}
+
+.bp-md {
+  @media screen and (max-width: 768px) {
+    padding: 62px;
+  }
+}
+.bp-sm {
+  @media screen and (max-width: 576px) {
+    padding: 44px;
+  }
+}
+
+.bp-400 {
+  @media screen and (max-width: 400px) {
+    padding: 0;
+    margin: 70px 0 0 0;
+  }
+}
+
+.title-margin {
+  margin-bottom: 40px;
+}
+
+.font-spacing {
+  letter-spacing: 0.03em;
+}
+
+.drag-none {
+  -webkit-user-drag: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.unselectable {
+  cursor: not-allowed !important;
+}
+
+.disable-color-for-svg {
+  filter: brightness(0.5) invert(1);
+}
+
+.disable-box-border {
+  border: 1px solid #d9d9d9;
+}
+
+.disable-color {
+  color: #ddd !important;
+  filter: brightness(0.5) invert(1);
+  cursor: not-allowed !important;
+}
+
+.white-color {
+  color: #ffffff;
+}
+
+.black-color {
+  color: #000;
+}
+
+.yellow-color {
+  color: #ffc107;
+}
+
+// .ReactModal__Overlay {
+//   z-index: 1001 !important;
+// }
+
+// .ReactModal__Overlay {
+//   z-index: 1001 !important;
+// }
+
+// .ReactModal__Overlay {
+//   opacity: 0;
+//   transition: all 100 ease-in-out;
+// }
+
+// .ReactModal__Overlay--after-open {
+//   opacity: 1;
+// }
+
+// .ReactModal__Overlay--before-close {
+//   opacity: 0;
+// }

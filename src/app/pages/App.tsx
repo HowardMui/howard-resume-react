@@ -1,33 +1,27 @@
-import { ProgressBar } from 'app/components';
-import { Button, Container } from 'react-bootstrap';
 import { ExperienceContainer } from './ExperienceContainer';
-import SkillContainer from './SkillContainer/SkillContainer';
+import { ContactContainer } from './ContactContainer';
+import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
+import AboutContainer from './AboutContainer/AboutContainer';
+import { Footer, NavBar } from 'app/components/Common';
+import HomeContainer from './HomeContainer/HomeContainer';
+import { BrowserRouter } from 'react-router-dom';
+import { useState } from 'react';
+import { NavBarType } from 'models';
 
-function App() {
+const App = () => {
+  const [active, setActive] = useState<NavBarType | null>(null);
+
   return (
-    <Container>
-      <div style={{ height: '100vh' }}>Hello world</div>
-      <Button variant="danger" size="lg">
-        testbtn
-      </Button>
-      <ProgressBar value={95}></ProgressBar>
-      <SkillContainer />
-      <div className="beforeExp">beforeExp</div>
-      <div className="beforeExp">beforeExp</div>
-      <div className="beforeExp">beforeExp</div>
-      <div className="beforeExp">beforeExp</div>
-      <div className="beforeExp">beforeExp</div>
-      <ExperienceContainer />
-      <div className="beforeExp">beforeExp</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-    </Container>
+    <BrowserRouter>
+      <NavBar active={active} setActive={setActive} />
+      <HomeContainer setActive={setActive} />
+      <AboutContainer setActive={setActive} />
+      <ExperienceContainer setActive={setActive} />
+      <PortfolioContainer setActive={setActive} />
+      <ContactContainer setActive={setActive} />
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

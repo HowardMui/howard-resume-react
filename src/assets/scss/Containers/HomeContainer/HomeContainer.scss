@@ -1,0 +1,71 @@
+.home-container {
+  height: 100vh;
+  background-image: url('../../../icons/Ellipse-home-bg.svg');
+  background-position: top 100% right 130%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .left-div {
+    .content-wrapper {
+      .job-title {
+        font-size: 20px;
+        color: #e1b2b8;
+      }
+
+      .my-name {
+        font-size: 80px;
+        background-image: linear-gradient(to right, #f88686, #f9b785);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      @media screen and (max-width: 576px) {
+        .job-title {
+          font-size: 10px;
+        }
+
+        .my-name {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+
+  .right-div {
+    padding-top: 100px;
+
+    .gif-div {
+      // transform: scaleX(-1);
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-top: 0px;
+    }
+  }
+
+  .link-to-about {
+    position: absolute;
+    bottom: 5vh;
+
+    .inner-ball-wrapper {
+      width: 35px;
+      height: 64px;
+      border-radius: 32px;
+      border: 4px solid #000;
+
+      .infinity-scroll-ball {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 20px;
+      }
+    }
+  }
+}
