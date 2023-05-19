@@ -7,7 +7,7 @@ import {
 } from 'react-vertical-timeline-component';
 import { MdOutlineAdd } from 'react-icons/md';
 import { motion } from 'framer-motion';
-import { fadeInFromTop } from 'utils/motion';
+import { fadeIn, fadeInFromTop } from 'utils/motion';
 import { useOnScreen } from 'hooks/useOnScreen';
 import { NavBarType } from 'models';
 import 'assets/scss/Containers/ExperienceContainer/ExperienceContainer.scss';
@@ -45,14 +45,14 @@ const ExperienceContainer = ({ setActive }: Props) => {
       variants={fadeInFromTop()}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: '-200px' }}
+      viewport={{ once: true, margin: '-200px 0px 0px 0px' }}
       className="section-wrapper-container"
       id={'experience'}
       ref={myDivRef}
     >
       <div className="experience-container">
         <div style={{ marginBottom: '50px' }}>
-          <motion.div variants={fadeInFromTop()}>
+          <motion.div variants={fadeIn('right', '', 0.5, 1)}>
             <p className={`text-center`}>
               My previous jobs and my qualifications.
             </p>

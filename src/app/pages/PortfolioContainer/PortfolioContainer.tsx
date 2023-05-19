@@ -1,11 +1,11 @@
 import ProjectCard from 'app/components/Portfolio/ProjectCard';
 import { PORTFOLIO_DATA } from 'constant';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import 'assets/scss/Containers/PortfolioContainer/PortfolioContainer.scss';
 import { NavBarType, OptionItems, PortfolioData, WorkCategories } from 'models';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import { fadeIn, fadeInFromTop } from 'utils/motion';
+import { fadeIn } from 'utils/motion';
 import { useOnScreen } from 'hooks/useOnScreen';
 
 const TabsArray: OptionItems[] = [
@@ -71,8 +71,6 @@ const PortfolioContainer = ({ setActive }: Props) => {
     }
   };
 
-  // console.log(data);
-
   return (
     <motion.section
       initial="hidden"
@@ -83,7 +81,7 @@ const PortfolioContainer = ({ setActive }: Props) => {
       ref={myDivRef}
     >
       <div className="portfolio-container">
-        <motion.div variants={fadeInFromTop()}>
+        <motion.div variants={fadeIn('down', '', 0.5, 1)}>
           <p className={`text-center`}>My work so far.</p>
           <h2 className={`text-center`}>Portfolio</h2>
 
@@ -99,7 +97,7 @@ const PortfolioContainer = ({ setActive }: Props) => {
             ))}
           </div>
         </motion.div>
-        <motion.div variants={fadeInFromTop()}>
+        <motion.div variants={fadeIn('down', '', 0.5, 1)}>
           <Row>
             <AnimatePresence>
               {data.map((myWork, index) => (
