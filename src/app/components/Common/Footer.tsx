@@ -33,17 +33,17 @@ export const Footer = (props: Props) => {
   return (
     <div className="footer-container p-5 bg-dark">
       <p className="title">Howard Mui</p>
-      <div className="icon-div">
-        <div className="icon fw-bold" onClick={() => iconOnClick('github')}>
+      <div className="link-div">
+        <div className="link fw-bold" onClick={() => iconOnClick('github')}>
           Github
         </div>
-        <div className="icon fw-bold" onClick={() => iconOnClick('linkedin')}>
+        <div className="link fw-bold" onClick={() => iconOnClick('linkedin')}>
           Linked-in
         </div>
-        <div className="icon fw-bold" onClick={() => iconOnClick('indeed')}>
+        <div className="link fw-bold" onClick={() => iconOnClick('indeed')}>
           Indeed
         </div>
-        <div className="icon fw-bold" onClick={() => iconOnClick('email')}>
+        <div className="link fw-bold" onClick={() => iconOnClick('email')}>
           Email
         </div>
       </div>
