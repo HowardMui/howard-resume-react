@@ -57,12 +57,11 @@ export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
   {
     category: 'others',
     languages: [
-      'FIRGMA',
-      'ADOBE AI',
-      'ADOBE XD',
-      'ADOBE PR',
       'GIT',
       'BITBUCKET',
+      'FIRGMA',
+      'ADOBE AI, Xd, PR',
+      'Microsoft Office',
     ],
     icon: (
       <img

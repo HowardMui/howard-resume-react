@@ -13,12 +13,11 @@ export const MT_JOURNEY: TimeLineData[] = [
     company: 'Appicidea IT Solutions Limited',
     title: 'Front-end developer',
     description: [
-      'Developed and implemented CMS, web and moblie applications with React, React Native, Typescript',
-      // 'Mainly responsible for frontend development using React and React Native',
+      'Developed and implemented CMS, web and mobile applications with React, React Native, Typescript',
 
       'Work closely with colleagues to develop business logic, system and design',
 
-      'Participate in scrum activities and practice Agile methodologies',
+      'Participated in scrum activities and practice Agile methodologies',
     ],
     dateRange: 'Jun 2022 - Current',
     school: null,
@@ -28,11 +27,11 @@ export const MT_JOURNEY: TimeLineData[] = [
     company: 'Resolve Technology Limited',
     title: 'Digital Operation Center Engineer',
     description: [
-      'Monitor the entire operation of virtual banks, including networks, performances of platforms and IT services',
+      'Monitor-ed the entire operation of virtual banks, including networks, performances of platforms and IT services',
 
-      'Execute problem-shooting to review the error log via Rancher and Graylog',
+      'Executed problem-shooting to review the error log via Rancher and Graylog',
 
-      'Conduct and deploy change tasks and patches via AWS and CyberArt',
+      'Conducted and deployed change tasks and patches via AWS and CyberArt',
     ],
     dateRange: 'Aug 2021 - Apr 2022',
     school: null,

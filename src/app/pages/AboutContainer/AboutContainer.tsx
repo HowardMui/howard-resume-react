@@ -45,13 +45,13 @@ const AboutContainer = ({ setActive }: Props) => {
           className="mb-5"
           style={{ letterSpacing: 1 }}
         >
-          With high motivation and perseverance, I was an Engineer of Digital
-          Operation Centre at Resolve Technology Limited. Inspired by the
-          previous job, I have been self-learning languages of programming for
-          more than one year. Despite my degree in Social Science, I have still
-          managed to develop my own website from scratch with my knowledge of
-          programming. Now, my goal is to become a website developer and I will
-          keep working on it till the end.
+          A detail-oriented and self-motivated Fronted Developer with a year of
+          experience in creating responsive web applications, mobile
+          applications and Content Management System(CMS) using React and React
+          Native. A position in which I can continually refine my coding skills,
+          learn new technologies and collaborate with teammates to develop
+          excellent products is preferred. Being a highly motivated learner, I
+          always keep myself well-equipped in order to meet the market needs.
         </motion.p>
         <div className="flip-container">
           {MY_SKILL_FLIP_CARD_DATA.map((card, index) => (

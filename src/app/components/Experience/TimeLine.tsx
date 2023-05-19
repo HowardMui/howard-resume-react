@@ -39,7 +39,7 @@ export const TimeLine = ({ data }: Props) => {
       <ul className="mt-3">
         {data.description &&
           data.description.map((content, index) => (
-            <li key={index} className="py-3">
+            <li key={index} className="py-2">
               {content}
             </li>
           ))}

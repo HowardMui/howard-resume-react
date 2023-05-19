@@ -94,32 +94,26 @@ export const NavBar = ({ active, setActive }: Props) => {
       className="navbar-container"
       style={{ background: pageScrollY > 0 ? 'rgba(0,0,0,0.5)' : '' }}
     >
-      <Link
-        to="/"
-        className="navbar-brand fs-4"
+      <div
+        className={`navbar-brand fs-4 ${
+          pageScrollY > 0 ? 'white-color' : 'black-color'
+        }`}
         onClick={homeTitleOnClick}
-        style={{
-          color: pageScrollY > 0 ? '#FFFFFF' : '#000',
-        }}
       >
         Howard Mui
-      </Link>
+      </div>
       <nav className="navbar-wrapper" ref={navRef}>
         {NavBarData.map(({ title, id }, index) => (
           <div
             key={index}
-            // href={`#${id}`}
             onClick={() => navTitleOnClick(id)}
-            className="nav-title"
-            style={{
-              color:
-                active === id
-                  ? '#ffc107'
-                  : pageScrollY > 0
-                  ? '#FFFFFF'
-                  : baseColor,
-            }}
-            // style={colorCondition(title)}
+            className={`nav-title ${
+              active === id
+                ? 'yellow-color'
+                : pageScrollY > 0
+                ? 'white-color'
+                : 'black-color'
+            }`}
           >
             {title}
           </div>

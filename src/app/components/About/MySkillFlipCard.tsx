@@ -12,11 +12,11 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
   const RenderTitle = (title: string): string => {
     switch (title) {
       case 'web & mobile':
-        return 'Website & Mobile Development';
+        return 'Website & Mobile';
       case 'backend':
-        return 'Backend Development';
+        return 'Backend';
       case 'devops':
-        return 'Devops Enginner';
+        return 'Devops';
       default:
         return 'Others';
     }
@@ -42,7 +42,7 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
           className="cus-card flipcard front-card"
         >
           <div className="text-center front-inner">
-            <div className="image-div ">{cardData.icon}</div>
+            <div className="image-div">{cardData.icon}</div>
             <h5 className="title-div">{RenderTitle(cardData.category)}</h5>
           </div>
         </motion.div>
