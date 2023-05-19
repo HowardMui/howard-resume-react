@@ -8,7 +8,6 @@ import {
 import { MdOutlineAdd } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { fadeInFromTop } from 'utils/motion';
-import { SectionWrapper } from 'HOC';
 import { useOnScreen } from 'hooks/useOnScreen';
 import { NavBarType } from 'models';
 import 'assets/scss/Containers/ExperienceContainer/ExperienceContainer.scss';
@@ -43,6 +42,7 @@ const ExperienceContainer = ({ setActive }: Props) => {
   return (
     <motion.section
       // variants={staggerContainer()}
+      variants={fadeInFromTop()}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: '-200px' }}

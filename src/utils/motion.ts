@@ -1,5 +1,7 @@
 import { Variants } from 'framer-motion';
 
+type FadeInDirection = 'left' | 'right' | 'up' | 'down';
+
 export const textVariant = (delay: number) => {
   return {
     hidden: {
@@ -36,7 +38,7 @@ export const fadeInFromTop = (): Variants => {
   };
 };
 
-export const fadeIn = (direction, type, delay, duration) => {
+export const fadeIn = (direction: FadeInDirection, type, delay, duration) => {
   return {
     hidden: {
       x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,

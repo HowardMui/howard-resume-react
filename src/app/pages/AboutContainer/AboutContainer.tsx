@@ -4,7 +4,7 @@ import { MySkillFlipCard } from 'app/components';
 import { MY_SKILL_FLIP_CARD_DATA } from 'constant';
 import { motion } from 'framer-motion';
 
-import { fadeIn, fadeInFromTop } from 'utils/motion';
+import { fadeIn } from 'utils/motion';
 import 'assets/scss/Containers/AboutContainer/AboutContainer.scss';
 import { useEffect, useRef } from 'react';
 import { useOnScreen } from 'hooks/useOnScreen';
@@ -27,25 +27,28 @@ const AboutContainer = ({ setActive }: Props) => {
 
   return (
     <motion.section
-      // variants={staggerContainer()}
+      variants={fadeIn('right', '', 0.35, 1)}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: '-200px' }}
+      whileInView={'show'}
+      viewport={{ once: true }}
       className="section-wrapper-container"
       id={'about'}
       ref={myDivRef}
     >
       <div className="about-container">
-        <motion.div variants={fadeInFromTop()} className="mb-5 text-center">
+        <motion.div
+          variants={fadeIn('right', '', 0.4, 1)}
+          className="mb-5 text-center"
+        >
           <p className={`text-center`}>Introduction.</p>
           <h2 className="fw-bold">Overview</h2>
         </motion.div>
         <motion.p
-          variants={fadeIn('', '', 0.5, 1)}
+          variants={fadeIn('right', '', 0.65, 1)}
           className="mb-5"
           style={{ letterSpacing: 1 }}
         >
-          A detail-oriented and self-motivated Fronted Developer with a year of
+          A detail-oriented and self-motivated Frontend Developer with a year of
           experience in creating responsive web applications, mobile
           applications and Content Management System(CMS) using React and React
           Native. A position in which I can continually refine my coding skills,
@@ -58,7 +61,7 @@ const AboutContainer = ({ setActive }: Props) => {
             <motion.div
               className=""
               key={index}
-              variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+              variants={fadeIn('right', 'spring', index * 0.8, 0.5)}
             >
               <MySkillFlipCard cardData={card} />
             </motion.div>

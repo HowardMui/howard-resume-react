@@ -1,4 +1,4 @@
-import { SectionWrapper } from 'HOC';
+import { motion, useInView } from 'framer-motion';
 import ContactFormCard from 'app/components/Contact/ContactFormCard';
 
 import { Container } from 'react-bootstrap';
@@ -7,6 +7,7 @@ import 'assets/scss/Containers/ContactContainer/ContactContainer.scss';
 import { useEffect, useRef } from 'react';
 import { useOnScreen } from 'hooks/useOnScreen';
 import { NavBarType } from 'models';
+import { fadeInFromTop } from 'utils/motion';
 
 interface Props {
   setActive: (value: NavBarType) => void;
@@ -24,8 +25,12 @@ const ContactContainer = ({ setActive }: Props) => {
   }, [isIntersecting, setActive]);
 
   return (
-    <div
-      className="contact-container bp-md bp-sm bp-400"
+    <motion.section
+      variants={fadeInFromTop()}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: true }}
+      className="contact-container"
       id="contact"
       ref={myDivRef}
     >
@@ -34,7 +39,7 @@ const ContactContainer = ({ setActive }: Props) => {
       <Container className="innerWrapper">
         <ContactFormCard />
       </Container>
-    </div>
+    </motion.section>
   );
 };
 
