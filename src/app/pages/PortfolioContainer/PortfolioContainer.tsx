@@ -110,9 +110,6 @@ const PortfolioContainer = ({ setActive }: Props) => {
     }
   };
 
-  //   console.log(isInView);
-  //   console.log(scope);
-
   return (
     <motion.section
       // variants={staggerContainer()}

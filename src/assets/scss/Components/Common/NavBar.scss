@@ -14,7 +14,6 @@
   .navbar-brand {
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    color: #000;
     &:hover {
       color: #ffc107;
     }
@@ -28,12 +27,11 @@
 
     .nav-title {
       margin: 0 1rem;
-      color: #ffffff;
       text-decoration: none;
       transition: 0.5s ease-in-out;
       cursor: pointer;
       &:hover {
-        color: #ffc107;
+        color: #ffc107 !important;
       }
     }
   }
