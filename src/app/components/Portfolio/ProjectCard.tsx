@@ -56,13 +56,7 @@ const ProjectCard = ({ data, index }: Props) => {
         <div className="media-div">
           {video ? (
             <>
-              <video
-                className="needToZoom"
-                muted
-                loop
-                autoPlay
-                style={{ width: '100%', height: '100%' }}
-              >
+              <video muted loop autoPlay>
                 <source src={video} />
               </video>
             </>
