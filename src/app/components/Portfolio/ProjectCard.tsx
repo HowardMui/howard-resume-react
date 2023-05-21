@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { PortfolioData } from 'models';
 import { useState } from 'react';
 import { BiLink } from 'react-icons/bi';
-import { FiZoomIn } from 'react-icons/fi';
+// import { FiZoomIn } from 'react-icons/fi';
 import { ImageExplore } from '../Common';
 
 import { VscGithubInverted } from 'react-icons/vsc';

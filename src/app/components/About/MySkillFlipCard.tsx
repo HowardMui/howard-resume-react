@@ -43,7 +43,7 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
         >
           <div className="text-center front-inner">
             <div className="image-div">{cardData.icon}</div>
-            <h5 className="title-div">{RenderTitle(cardData.category)}</h5>
+            <p className="title-div">{RenderTitle(cardData.category)}</p>
           </div>
         </motion.div>
 

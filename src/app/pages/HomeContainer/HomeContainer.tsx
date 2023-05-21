@@ -1,8 +1,5 @@
 import 'assets/scss/Containers/HomeContainer/HomeContainer.scss';
 import { motion } from 'framer-motion';
-import { ReactComponent as CpuIcon } from 'assets/icons/home-cpu-no-clock.svg';
-// import CodingGif from 'assets/gif/coding_cpu.gif';
-import DesktopGif from 'assets/gif/desktop-nobg.gif';
 import OldDesktopGif from 'assets/gif/old_desktop_cropped.gif';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useEffect, useRef } from 'react';
@@ -24,6 +21,10 @@ const HomeContainer = ({ setActive }: Props) => {
     }
   }, [isIntersecting, setActive]);
 
+  const btnOnclick = () => {
+    document.getElementById?.('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="home-container" ref={myDivRef}>
       <Container>
@@ -39,28 +40,28 @@ const HomeContainer = ({ setActive }: Props) => {
             </div>
           </Col>
           <Col lg={6} className="right-div">
-            {/* <img src={DesktopGif} alt="desktop" className="gif-div" /> */}
             <img src={OldDesktopGif} alt="desktop" className="gif-div" />
           </Col>
         </Row>
       </Container>
 
-      <div className="link-to-about xs:bottom-10 bottom-32">
-        <a href="#about">
-          <div className="inner-ball-wrapper p-2 ">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop',
-              }}
-              className="infinity-scroll-ball mb-1"
-            />
-          </div>
-        </a>
+      <div
+        className="link-to-about xs:bottom-10 bottom-32"
+        onClick={btnOnclick}
+      >
+        <div className="inner-ball-wrapper p-2">
+          <motion.div
+            animate={{
+              y: [0, 24, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: 'loop',
+            }}
+            className="infinity-scroll-ball mb-1"
+          />
+        </div>
       </div>
     </div>
   );
