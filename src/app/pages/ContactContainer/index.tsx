@@ -11,9 +11,10 @@ import { fadeInFromTop } from 'utils/motion';
 
 interface Props {
   setActive: (value: NavBarType) => void;
+  ref: any;
 }
 
-const ContactContainer = ({ setActive }: Props) => {
+const ContactContainer = ({ setActive, ref }: Props) => {
   const myDivRef = useRef(null);
 
   const isIntersecting = useOnScreen({ ref: myDivRef });
@@ -25,21 +26,23 @@ const ContactContainer = ({ setActive }: Props) => {
   }, [isIntersecting, setActive]);
 
   return (
-    <motion.section
-      variants={fadeInFromTop()}
-      initial="hidden"
-      whileInView={'show'}
-      viewport={{ once: true }}
-      className="contact-container"
-      id="contact"
-      ref={myDivRef}
-    >
-      <p className={`text-center`}>Get in touch.</p>
-      <h2 className={`title-div title-margin text-center`}>Contact</h2>
-      <Container className="innerWrapper">
-        <ContactFormCard />
-      </Container>
-    </motion.section>
+    <div ref={ref}>
+      <motion.section
+        variants={fadeInFromTop()}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: true }}
+        className="contact-container"
+        id="contact"
+        ref={myDivRef}
+      >
+        <p className={`text-center`}>Get in touch.</p>
+        <h2 className={`title-div title-margin text-center`}>Contact</h2>
+        <Container className="innerWrapper">
+          <ContactFormCard />
+        </Container>
+      </motion.section>
+    </div>
   );
 };
 
