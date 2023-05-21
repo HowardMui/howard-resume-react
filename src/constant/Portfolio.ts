@@ -23,7 +23,7 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     image: null,
     // image: require('assets/gif/HowardMui-fetch-project.gif'),
     // video: null,
-    video: require('assets/video/react-fetch-pexel.mp4'),
+    video: require('assets/video/HowardMui-fetch-project_Adobe.mp4'),
     url: 'https://howardmui-fetchpexels-project.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/Howard-fetchAPI-pexels',
     title: 'My Fetch Images Website',
