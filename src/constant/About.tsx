@@ -9,14 +9,7 @@ import CubeIcon from 'assets/icons/cube-bg.svg';
 export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
   {
     category: 'web & mobile',
-    languages: [
-      'HTML',
-      'CSS',
-      'JAVASCRIPT',
-      'TYPESCRIPT',
-      'REACT.JS',
-      'REACT-NATIVE',
-    ],
+    languages: ['HTML', 'CSS', 'TYPESCRIPT', 'REACT', 'REACT-NATIVE', 'NEXTJS'],
     icon: (
       <img
         src={ReactIcon}
@@ -29,7 +22,7 @@ export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
   },
   {
     category: 'backend',
-    languages: ['NODE.JS', 'MONGODB', 'PROGREST SQL'],
+    languages: ['NODEJS', 'NESTJS', 'MYSQL'],
     // icon: <img src="https://img.icons8.com/dusk/64/null/server.png" />,
     icon: (
       <img
@@ -42,8 +35,15 @@ export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
     ),
   },
   {
-    category: 'devops',
-    languages: ['DOCKER', 'KUBERNETES', 'ARGOCD', 'GRAFANA', 'MICROSERVICE'],
+    category: 'cloud',
+    languages: [
+      'DOCKER',
+      <div>
+        AWS
+        <br />
+        <p className="mb-0">{`(EC2, LAMBDA, S3, RDS, CLOUDWATCH)`}</p>
+      </div>,
+    ],
     icon: (
       <img
         src={CloudIcon}

@@ -59,7 +59,6 @@ const AboutContainer = ({ setActive }: Props) => {
         <div className="flip-container">
           {MY_SKILL_FLIP_CARD_DATA.map((card, index) => (
             <motion.div
-              className=""
               key={index}
               variants={fadeIn('right', 'spring', index * 0.8, 0.5)}
             >

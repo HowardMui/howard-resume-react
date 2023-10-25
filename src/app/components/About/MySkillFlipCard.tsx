@@ -15,8 +15,8 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
         return 'Website & Mobile';
       case 'backend':
         return 'Backend';
-      case 'devops':
-        return 'Devops';
+      case 'cloud':
+        return 'Cloud';
       default:
         return 'Others';
     }
