@@ -92,16 +92,16 @@ const ProjectCard = ({ data, index }: Props) => {
           <h3 className="">{title}</h3>
           <div className="content-section-div">
             <div className="mt-3">{content}</div>
-            <div className="d-flex mt-4">
+            <div className="d-flex mt-4 flex-wrap">
               {tags.length > 0
                 ? tags.map((tag, index) => (
-                    <div
+                    <span
                       key={index}
-                      className="me-1 tag-wrapper"
+                      className="me-1 tag-wrapper mb-2"
                       style={{ background: tag.color }}
                     >
-                      <div className="text-dark tag">#{tag.tag}</div>
-                    </div>
+                      <p className="text-dark tag mb-0">#{tag.tag}</p>
+                    </span>
                   ))
                 : null}
             </div>

@@ -2,11 +2,9 @@ import { PortfolioData } from 'models';
 
 export const PORTFOLIO_DATA: PortfolioData[] = [
   {
-    category: ['frontend', 'backend'],
-    image: null,
-    // image: require('assets/images/Portfolio/MyWeb/CompanyWeb/home-page.png'),
-    // video: null,
-    video: require('assets/video/React-company-website.mp4'),
+    category: ['frontend'],
+    image: require('assets/gif/react-company-website.gif'),
+    video: null,
     url: 'https://howardmui-company.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/HowardMui-Company-ReactProject',
     title: 'My Company Website',
@@ -20,10 +18,8 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
   },
   {
     category: ['frontend'],
-    // image: null,
-    image: require('assets/gif/HowardMui-fetch-project.gif'),
+    image: require('assets/gif/howardMui-fetch-project.gif'),
     video: null,
-    // video: require('assets/video/HowardMui-fetch-project_Adobe.mp4'),
     url: 'https://howardmui-fetchpexels-project.netlify.app/',
     gitHubLink: 'https://github.com/HowardMui/Howard-fetchAPI-pexels',
     title: 'My Fetch Images Website',
@@ -37,6 +33,42 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
       {
         tag: 'Nodejs',
         color: '#D2B4BC',
+      },
+    ],
+  },
+  {
+    category: ['backend'],
+    image: require('assets/images/Portfolio/SocialMedia/restAPI.png'),
+    video: null,
+    url: 'https://api.howardmui-blog-portfolio.net/api',
+    gitHubLink: 'https://github.com/HowardMui/social-media-nestjs',
+    title: 'Social Media RestAPI',
+    content:
+      'This is a twitter-like social media application API which conducted with Nestjs, MySQL, Sequelize, Redis.  This restAPI is also deployed and hosting on AWS with EC2(via Docker), load balancer and route53',
+    tags: [
+      {
+        tag: 'Nestjs',
+        color: '#db6e87',
+      },
+      {
+        tag: 'Swagger',
+        color: '#94d66d',
+      },
+      {
+        tag: 'MySQL',
+        color: '#91a8b3',
+      },
+      {
+        tag: 'Sequelize',
+        color: '#78bce3',
+      },
+      {
+        tag: 'Docker',
+        color: '#60bee6',
+      },
+      {
+        tag: 'AWS',
+        color: '#f5b453',
       },
     ],
   },
