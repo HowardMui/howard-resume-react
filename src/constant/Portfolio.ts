@@ -44,7 +44,7 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
     gitHubLink: 'https://github.com/HowardMui/social-media-nestjs',
     title: 'Social Media RestAPI',
     content:
-      'This is a twitter-like social media application API which conducted with Nestjs, MySQL, Sequelize, Redis.  This restAPI is also deployed and hosting on AWS with EC2(via Docker), load balancer and route53',
+      'This is a twitter-like social media application API which conducted with Nestjs, MySQL, Sequelize, Redis.  This restAPI is also deployed and hosting on AWS with EC2(via Docker), load balancer and route53.',
     tags: [
       {
         tag: 'Nestjs',
@@ -72,59 +72,4 @@ export const PORTFOLIO_DATA: PortfolioData[] = [
       },
     ],
   },
-  // {
-  //   category: 'appicidea',
-  //   image: require('assets/images/Portfolio/Weave/event-calendar.png'),
-  //   video: null,
-  //   url: null,
-  //   gitHubLink: null,
-  //   title: 'SV Web Application',
-  //   content:
-  //     'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-  //   tags: ['React', 'Nodejs'],
-  // },
-  // {
-  //   category: 'appicidea',
-  //   image: require('assets/images/Portfolio/Weave/event-calendar.png'),
-  //   video: null,
-  //   url: null,
-  //   gitHubLink: null,
-  //   title: 'SV CMS',
-  //   content:
-  //     'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-  //   tags: ['Typescript', 'Reactjs', 'Nodejs'],
-  // },
-  // {
-  //   category: 'appicidea',
-  //   image: require('assets/images/Portfolio/Weave/event-calendar.png'),
-  //   video: null,
-  //   url: null,
-  //   gitHubLink: null,
-  //   title: 'Weave-living CMS',
-  //   content:
-  //     'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-  //   tags: ['Typescript', 'React', 'Nodejs'],
-  // },
-  // {
-  //   category: 'appicidea',
-  //   image: require('assets/images/Portfolio/Weave/event-calendar.png'),
-  //   video: null,
-  //   url: null,
-  //   gitHubLink: null,
-  //   title: 'Fader CMS',
-  //   content:
-  //     'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-  //   tags: ['Typescript', 'React', 'Nodejs'],
-  // },
-  // {
-  //   category: 'appicidea',
-  //   image: require('assets/images/Portfolio/Weave/event-calendar.png'),
-  //   video: null,
-  //   url: null,
-  //   gitHubLink: null,
-  //   title: 'Man Space Mobile App',
-  //   content:
-  //     'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-  //   tags: ['Typescript', 'React-Native', 'Nodejs'],
-  // },
 ];

@@ -59,7 +59,7 @@ const ProjectCard = ({ data, index }: Props) => {
           </div>
         </div>
         <div className="content-div mt-1 p-4">
-          <h3 className="">{title}</h3>
+          <h3>{title}</h3>
           <div className="content-section-div">
             <div className="mt-3">{content}</div>
             <div className="d-flex mt-4 flex-wrap">
