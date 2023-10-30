@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { PortfolioData } from 'models';
 import { useState } from 'react';
 import { BiLink } from 'react-icons/bi';
-// import { FiZoomIn } from 'react-icons/fi';
 import { ImageExplore } from '../Common';
 
 import { VscGithubInverted } from 'react-icons/vsc';
+import { Link } from 'react-router-dom';
 
 interface Props {
   data: PortfolioData;
@@ -16,35 +16,6 @@ const ProjectCard = ({ data, index }: Props) => {
   const { video, image, url, gitHubLink, title, content, tags, category } =
     data;
   const [open, setOpen] = useState<boolean>(false);
-
-  const iconOnClick = (icon: string) => {
-    window.open(icon, '_blank');
-  };
-
-  // const testTransform = () => {
-  //   return {
-  //     exit: {
-  //       opacity: 0,
-  //       scale: 0,
-  //       transition: {
-  //         type: 'spring',
-  //         duration: 0.5,
-  //       },
-  //     },
-  //     //   hide: {
-  //     //     opacity: 0,
-  //     //     scale: 0,
-  //     //   },
-  //     show: {
-  //       opacity: 1,
-  //       scale: 1,
-  //       transition: {
-  //         type: 'spring',
-  //         duration: 0.5,
-  //       },
-  //     },
-  //   };
-  // };
 
   const onClose = () => {
     setOpen(false);
@@ -68,23 +39,22 @@ const ProjectCard = ({ data, index }: Props) => {
                 width={'100%'}
                 height={'100%'}
               />
-              {/* <div className="link-wrapper">
-                <div className=" link-div" onClick={() => setOpen(true)}>
-                  <FiZoomIn />
-                </div>
-              </div> */}
             </>
           )}
           <div className="link-wrapper">
             {gitHubLink && (
-              <div className="github-link link-div">
-                <VscGithubInverted onClick={() => iconOnClick(gitHubLink)} />
-              </div>
+              <Link
+                to={gitHubLink}
+                target="_blank"
+                className="github-link link-div"
+              >
+                <VscGithubInverted />
+              </Link>
             )}
             {url && (
-              <div className="website-link link-div">
-                <BiLink onClick={() => iconOnClick(url)} />
-              </div>
+              <Link to={url} target="_blank" className="website-link link-div">
+                <BiLink />
+              </Link>
             )}
           </div>
         </div>
