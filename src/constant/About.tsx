@@ -22,7 +22,19 @@ export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
   },
   {
     category: 'backend',
-    languages: ['NODEJS', 'NESTJS', 'MYSQL'],
+    languages: [
+      'NODEJS',
+      'NESTJS',
+      'MYSQL',
+      'SWAGGER',
+      <div>
+        ORM
+        <br />
+        <p className="mb-0">- SEQUELIZE</p>
+        <p className="mb-0">- PRISMA</p>
+      </div>,
+      'REDIS',
+    ],
     // icon: <img src="https://img.icons8.com/dusk/64/null/server.png" />,
     icon: (
       <img
@@ -41,7 +53,12 @@ export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
       <div>
         AWS
         <br />
-        <p className="mb-0">{`(EC2, LAMBDA, S3, RDS, CLOUDWATCH)`}</p>
+        <p className="mb-0">- EC2</p>
+        <p className="mb-0">- S3</p>
+        <p className="mb-0">- LAMBDA</p>
+        <p className="mb-0">- CLOUDFRONT</p>
+        <p className="mb-0">- ROUTE53</p>
+        <p className="mb-0">- ACM</p>
       </div>,
     ],
     icon: (
@@ -56,13 +73,7 @@ export const MY_SKILL_FLIP_CARD_DATA: AboutSkillSetData[] = [
   },
   {
     category: 'others',
-    languages: [
-      'GIT',
-      'BITBUCKET',
-      'FIRGMA',
-      'ADOBE AI, Xd, PR',
-      'Microsoft Office',
-    ],
+    languages: ['GIT', 'BITBUCKET', 'FIRGMA', 'ADOBE AI, Xd, PR', 'MS OFFICE'],
     icon: (
       <img
         src={CubeIcon}

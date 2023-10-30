@@ -13,11 +13,11 @@ export const MT_JOURNEY: TimeLineData[] = [
     company: 'Appicidea IT Solutions Limited',
     title: 'Front-end developer',
     description: [
-      'Develope and implemented CMS, web and mobile applications with React, React Native, Nextjs and Typescript',
+      'Developed and implemented CMS, web and mobile applications with React, React Native, Nextjs and Typescript',
 
-      'Work closely with colleagues to develop business logic, system and design',
+      'Accordinated with colleagues to develop business logic, system and design',
 
-      'Participate in scrum activities and practice Agile methodologies',
+      'Participated in scrum activities and practiced Agile methodologies',
     ],
     dateRange: 'Jun 2022 - Oct 2023',
     school: null,
