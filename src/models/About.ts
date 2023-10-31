@@ -1,11 +1,7 @@
-export type SkillCardCategory =
-  | 'web & mobile'
-  | 'backend'
-  | 'devops'
-  | 'others';
+export type SkillCardCategory = 'web & mobile' | 'backend' | 'cloud' | 'others';
 
 export interface AboutSkillSetData {
-  languages: string[];
+  languages: React.ReactNode[];
   category: SkillCardCategory;
   icon?: React.ReactNode;
 }

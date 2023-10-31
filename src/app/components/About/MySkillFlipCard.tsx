@@ -15,8 +15,8 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
         return 'Website & Mobile';
       case 'backend':
         return 'Backend';
-      case 'devops':
-        return 'Devops';
+      case 'cloud':
+        return 'Cloud';
       default:
         return 'Others';
     }
@@ -58,11 +58,11 @@ export const MySkillFlipCard = ({ cardData }: Props) => {
           }}
           className="cus-card flipcard back-card"
         >
-          {cardData.languages.map((lang, index) => (
-            <ul key={index}>
-              <li>{lang}</li>
-            </ul>
-          ))}
+          <ul className="mb-0 d-flex flex-column justify-content-evenly h-100">
+            {cardData.languages.map((lang, index) => (
+              <li key={index}>{lang}</li>
+            ))}
+          </ul>
         </motion.div>
       </motion.div>
     </>
